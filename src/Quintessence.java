@@ -1,11 +1,13 @@
-public class Quintessence extends CraftMaterialEquipment {
-    private static final Quintessence quintessenceInstance = new Quintessence(0);
+public class Quintessence {
+    private static QuintessenceFactory quintessenceUC = new QuintessenceFactory(0);
+    private static QuintessenceFactory quintessenceR = new QuintessenceFactory(0);
+    private static QuintessenceFactory quintessenceE = new QuintessenceFactory(0);
+    private static QuintessenceFactory quintessenceL = new QuintessenceFactory(0);
 
-    public Quintessence(int quantity) {
-        super(quantity);
-    }
-
-    public static Quintessence getQuintessenceInstance() {
-        return quintessenceInstance;
+    public Quintessence() {
+        quintessenceUC.setRarity(Rarity.uncommon);
+        quintessenceR.setRarity(Rarity.rare);
+        quintessenceE.setRarity(Rarity.epic);
+        quintessenceL.setRarity(Rarity.legendary);
     }
 }

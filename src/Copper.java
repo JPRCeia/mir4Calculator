@@ -1,6 +1,6 @@
 public class Copper {
     public int quantity;
-    private static final Copper copperInstance = new Copper();
+    private static Copper copperInstance = new Copper();
 
     private Copper() {
         this.quantity = 0;

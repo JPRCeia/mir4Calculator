@@ -1,11 +1,13 @@
-public class Steel extends CraftMaterialEquipment {
-    private static final Steel steelInstance = new Steel(0);
+public class Steel {
+    private static SteelFactory steelUC = new SteelFactory(0);
+    private static SteelFactory steelR = new SteelFactory(0);
+    private static SteelFactory steelE = new SteelFactory(0);
+    private static SteelFactory steelL = new SteelFactory(0);
 
-    public Steel(int quantity) {
-        super(quantity);
-    }
-
-    public static Steel getSteelInstance() {
-        return steelInstance;
+    public Steel() {
+        steelUC.setRarity(Rarity.uncommon);
+        steelR.setRarity(Rarity.rare);
+        steelE.setRarity(Rarity.epic);
+        steelL.setRarity(Rarity.legendary);
     }
 }

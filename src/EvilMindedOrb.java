@@ -1,11 +1,13 @@
-public class EvilMindedOrb extends CraftMaterialEquipment {
-    private static final EvilMindedOrb evilMindedOrbInstance = new EvilMindedOrb(0);
+public class EvilMindedOrb {
+    private static EvilMindedOrbFactory evilMindedOrbUC = new EvilMindedOrbFactory(0);
+    private static EvilMindedOrbFactory evilMindedOrbR = new EvilMindedOrbFactory(0);
+    private static EvilMindedOrbFactory evilMindedOrbE = new EvilMindedOrbFactory(0);
+    private static EvilMindedOrbFactory evilMindedOrbL = new EvilMindedOrbFactory(0);
 
-    public EvilMindedOrb(int quantity) {
-        super(quantity);
-    }
-
-    public static EvilMindedOrb getEvilMindedOrbInstance() {
-        return evilMindedOrbInstance;
+    public EvilMindedOrb() {
+        evilMindedOrbUC.setRarity(Rarity.uncommon);
+        evilMindedOrbR.setRarity(Rarity.rare);
+        evilMindedOrbE.setRarity(Rarity.epic);
+        evilMindedOrbL.setRarity(Rarity.legendary);
     }
 }

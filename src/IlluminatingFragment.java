@@ -1,11 +1,13 @@
-public class IlluminatingFragment extends CraftMaterialEquipment {
-    private static final IlluminatingFragment illuminatingFragmentInstance = new IlluminatingFragment(0);
+public class IlluminatingFragment {
+    private static IlluminatingFragmentFactory illuminatingFragmentUC = new IlluminatingFragmentFactory(0);
+    private static IlluminatingFragmentFactory illuminatingFragmentR = new IlluminatingFragmentFactory(0);
+    private static IlluminatingFragmentFactory illuminatingFragmentE = new IlluminatingFragmentFactory(0);
+    private static IlluminatingFragmentFactory illuminatingFragmentL = new IlluminatingFragmentFactory(0);
 
-    public IlluminatingFragment(int quantity) {
-        super(quantity);
-    }
-
-    public static IlluminatingFragment getIlluminatingFragmentInstance() {
-        return illuminatingFragmentInstance;
+    public IlluminatingFragment() {
+        illuminatingFragmentUC.setRarity(Rarity.uncommon);
+        illuminatingFragmentR.setRarity(Rarity.rare);
+        illuminatingFragmentE.setRarity(Rarity.epic);
+        illuminatingFragmentL.setRarity(Rarity.legendary);
     }
 }

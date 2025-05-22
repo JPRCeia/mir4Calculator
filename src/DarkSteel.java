@@ -1,6 +1,6 @@
 public class DarkSteel {
     public int quantity;
-    private static final DarkSteel darkSteelInstance = new DarkSteel();
+    private static DarkSteel darkSteelInstance = new DarkSteel();
 
     private DarkSteel() {
         this.quantity = 0;

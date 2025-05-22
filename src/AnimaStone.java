@@ -1,11 +1,13 @@
-public class AnimaStone extends CraftMaterialEquipment {
-    private static final AnimaStone animaStoneInstance = new AnimaStone(0);
+public class AnimaStone {
+    private static AnimaStoneFactory animaStoneUC = new AnimaStoneFactory(0);
+    private static AnimaStoneFactory animaStoneR = new AnimaStoneFactory(0);
+    private static AnimaStoneFactory animaStoneE = new AnimaStoneFactory(0);
+    private static AnimaStoneFactory animaStoneL = new AnimaStoneFactory(0);
 
-    public AnimaStone(int quantity) {
-        super(quantity);
-    }
-
-    public static AnimaStone getAnimaStoneInstance() {
-        return animaStoneInstance;
+    public AnimaStone() {
+        animaStoneUC.setRarity(Rarity.uncommon);
+        animaStoneR.setRarity(Rarity.rare);
+        animaStoneE.setRarity(Rarity.epic);
+        animaStoneL.setRarity(Rarity.legendary);
     }
 }

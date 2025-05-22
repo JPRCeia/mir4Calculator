@@ -1,11 +1,13 @@
-public class Platinum extends CraftMaterialEquipment {
-    private static final Platinum platinumInstance = new Platinum(0);
+public class Platinum {
+    private static PlatinumFactory platinumUC = new PlatinumFactory(0);
+    private static PlatinumFactory platinumR = new PlatinumFactory(0);
+    private static PlatinumFactory platinumE = new PlatinumFactory(0);
+    private static PlatinumFactory platinumL = new PlatinumFactory(0);
 
-    public Platinum(int quantity) {
-        super(quantity);
-    }
-
-    public static Platinum getPlatinumInstance() {
-        return platinumInstance;
+    public Platinum() {
+        platinumUC.setRarity(Rarity.uncommon);
+        platinumR.setRarity(Rarity.rare);
+        platinumE.setRarity(Rarity.epic);
+        platinumL.setRarity(Rarity.legendary);
     }
 }

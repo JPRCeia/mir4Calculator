@@ -1,6 +1,6 @@
 public class Powder {
     public int quantity;
-    private static final Powder powderInstance = new Powder();
+    private static Powder powderInstance = new Powder();
 
     private Powder() {
         this.quantity = 0;
