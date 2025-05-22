@@ -9,9 +9,8 @@ public abstract class Craft_Material_Equipment {
     private int darkSteelNeeded;
     private int powderNeeded;
 
-    public Craft_Material_Equipment(int quantity, Rarity rarity) {
+    public Craft_Material_Equipment(int quantity) {
         this.quantity = quantity;
-        this.rarity = rarity;
         copper = Copper.getInstance();
         darkSteel = DarkSteel.getInstance();
         powder = Powder.getInstance();
@@ -27,6 +26,10 @@ public abstract class Craft_Material_Equipment {
 
     public Rarity getRarity() {
         return rarity;
+    }
+
+    public void setRarity(Rarity rarity) {
+        this.rarity = rarity;
     }
 
     public int getQuantityNeeded() {
