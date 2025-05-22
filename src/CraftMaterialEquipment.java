@@ -1,4 +1,4 @@
-public abstract class Craft_Material_Equipment {
+public abstract class CraftMaterialEquipment {
     private int quantity;
     private Rarity rarity;
     private Copper copper;
@@ -9,7 +9,7 @@ public abstract class Craft_Material_Equipment {
     private int darkSteelNeeded;
     private int powderNeeded;
 
-    public Craft_Material_Equipment(int quantity) {
+    public CraftMaterialEquipment(int quantity) {
         this.quantity = quantity;
         copper = Copper.getInstance();
         darkSteel = DarkSteel.getInstance();
